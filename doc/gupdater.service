@@ -1,0 +1,11 @@
+[Unit]
+Description=Gcloud package auto update tool.
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/env python /usr/bin/gupdater
+
+[Install]
+WantedBy=multi-user.target
